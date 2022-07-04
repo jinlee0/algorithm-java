@@ -1,4 +1,4 @@
-package c1_bruteforce.p1_2798;
+package c10_bruteforce.p1_2798;
 
 import java.util.Scanner;
 

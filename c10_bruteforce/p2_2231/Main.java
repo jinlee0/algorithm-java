@@ -1,4 +1,4 @@
-package c1_bruteforce.p2_2231;
+package c10_bruteforce.p2_2231;
 
 import java.io.BufferedReader;
 import java.io.IOException;
