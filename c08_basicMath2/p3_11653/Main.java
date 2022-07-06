@@ -32,20 +32,22 @@ public class Main {
         return answer;
     }
 
-    private static int[] getPrimes(int rangeEnd) {
-        boolean[] arr = new boolean[rangeEnd + 1]; // false: prime
+    private static int[] getPrimes(int N) {
+        boolean[] arr = new boolean[N + 1]; // false: prime
         int primeSize = arr.length - 2;
-        for (int i = 2; i * i < rangeEnd + 1; i++) {
-            for (int j = i * i; j < rangeEnd + 1; j += i) {
-                if(!arr[j]){
-                    arr[j] = true;
-                    primeSize--;
+        for (int i = 2; i * i < N + 1; i++) {
+            if(!arr[i])
+                for (int j = i * i; j < N + 1; j += i) {
+                    if(!arr[j]){
+                        arr[j] = true;
+                        primeSize--;
+                    }
                 }
-            }
         }
         int[] primes = new int[primeSize];
         int idx = 0;
         for(int i=2; i<arr.length; i++) if(!arr[i]) primes[idx++] = i;
         return primes;
     }
+
 }
