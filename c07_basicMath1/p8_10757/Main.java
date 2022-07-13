@@ -1,4 +1,4 @@
-package c08_basicMath1.p8_10757;
+package c07_basicMath1.p8_10757;
 
 import java.io.*;
 import java.util.StringTokenizer;

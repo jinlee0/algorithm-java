@@ -23,7 +23,7 @@ public class Main {
         List<Integer> primes = getPrimes(M, N);
         if(primes.size() < 1) return null;
         Integer sum = primes.stream().reduce(0, (a, b) -> a + b);
-        int min = primes.stream().mapToInt(e -> e).min().getAsInt();
+        int min = primes.get(0);
         return new int[]{sum, min};
     }
 

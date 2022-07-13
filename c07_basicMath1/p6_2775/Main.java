@@ -1,4 +1,4 @@
-package c08_basicMath1.p6_2775;
+package c07_basicMath1.p6_2775;
 
 import java.io.*;
 

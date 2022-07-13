@@ -1,4 +1,4 @@
-package c08_basicMath1.p7_2839;
+package c07_basicMath1.p2_2292;
 
 import java.io.*;
 
@@ -6,18 +6,25 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
         int N = Integer.parseInt(br.readLine());
-        int res = getNumberOfBags(N);
+        int res = solution(N);
         bw.write(Integer.toString(res));
+        bw.flush();
+
         bw.close();
         br.close();
     }
 
-    private static int getNumberOfBags(int N) {
-        int r5 = N % 5;
-        if(N==4 || N==7) return -1;
-        else if (r5 == 0) return N / 5;
-        else if (r5 == 1 || r5 == 3) return N / 5 + 1;
-        else return N / 5 + 2;
+    private static int solution(int N) {
+        int sum = 1;
+        int cnt = 1;
+        while (sum < N) {
+            sum += cnt * 6;
+            cnt++;
+        }
+        return cnt;
+
     }
+
 }
